@@ -1,6 +1,104 @@
 {% extends "layout.html" %}
 {% block content %}
 
+<div class="container">
+{{ hello }}
+<h4 class="text text-primary">Room Occupancy Detection</h4><br>
 
+	<div class="container-fluid">
 
+		<form class="form" method="post" action="/">
+			<!--  	Temperature 	Humidity 	Light 	CO2 	HumidityRatio 	Occupancy -->
+			<!-- 437.333333333333,1029.66666666667,0.005021010890214001, -->
+			<table class="table">
+				<tr>
+					<th>
+						<label for="temp"> Temperature </label>
+						<select name="type">
+							<option name="Celsius">Celsius</option>
+							<option name="Fahrenheit">Fahrenheit</option>
+							<option name="Kelvin">Kelvin</option>
+						</select>
+					</th>
+					<td>
+						<input type="text" name="Temperature" id="temp" class="form-control" placeholder="Ex: 21.76">
+					</td>
+				</tr>
+
+				<tr>
+					<th>
+						<label for="hum">Humidity</label>
+					</th>
+					<td>
+						<input type="text" name="Humidity" id="hum" class="form-control" placeholder="Ex: 31.3">
+					</td>
+				</tr>
+
+				<tr>
+					<th>
+						<label for="light">Light</label>
+						(<a href="https://en.wikipedia.org/wiki/Lux">LUX</a>)
+					</th>
+					<td>
+						<input type="text" name="Light" id='light' class="form-control" placeholder="Ex: 437.23">
+					</td>
+				</tr>
+
+				<tr>
+					<th>
+						<label for="co2">CO2</label>
+						(<a href="https://en.wikipedia.org/wiki/Parts-per_notation">PPM</a>)
+					</th>
+					<td>
+						<input type="text" name="CO2" id="co2" class="form-control" placeholder="Ex: 1029.667">
+					</td>
+				</tr>
+
+				<tr>
+					<th>
+						<label for="hr_rat">HumidityRatio</label>
+					</th>
+				
+					<td>
+						<input type="text" name="HumidityRatio" id="hr_rat" class="form-control" placeholder="Ex: 0.005">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<font size="4"><a href="https://novelda.com/occupancy-detection.html">click here</a> for Visualization</font>
+					</td>
+					<td>
+
+						<input class="btn btn-success" type="submit" value="predict">
+
+						<a href="https://github.com/NaNdalal-dev/Room-Occupancy-Detection">
+							<img  src = "{{ url_for('static',filename='git.jpeg') }}"  width="30" height="30">
+						</a>
+
+					</td>
+				</tr>
+
+			</table>
+		</form>
+		
+	</div>
+		<center>
+
+				{% if show %}
+				<div class="container">
+					{% if error %}
+					<h4 class="text text-danger">{{ error }}</h4>
+					{% else %}
+						{% if message %}
+						<h3 class="text text-primary">Room Occupied.</h3>
+						{% else %}
+						<h3 class="text text-Success">Room Not Occupied</h3>
+						{% endif %}
+					{% endif %}
+				</div>
+				{% endif %}
+		</center>
+
+</div>
 {% endblock %}
