@@ -4,9 +4,10 @@
 
 <b>Attribute Information:</b>
 
-Temperature, in Celsius/Kelvin/Fahrenheit
-Relative Humidity, %
-Light,<a href = "https://en.wikipedia.org/wiki/Lux">in Lux</a>
-CO2, <a href="https://en.wikipedia.org/wiki/Parts-per_notation">in ppm</a>
-Humidity Ratio, Derived quantity from temperature and relative humidity, in kgwater-vapor/kg-air
-Occupancy, 0 or 1, 0 for not occupied, 1 for occupied status
+Temperature, in Celsius/Kelvin/Fahrenheit <br>
+Relative Humidity, % <br>
+Light,<a href = "https://en.wikipedia.org/wiki/Lux">in Lux</a> <br>
+CO2, <a href="https://en.wikipedia.org/wiki/Parts-per_notation">in ppm</a> <br>
+Humidity Ratio, Derived quantity from temperature and relative humidity, in kgwater-vapor/kg-air <br>
+<b> Result</b>
+<p>Occupancy, 0 or 1, 0 for not occupied, 1 for occupied status</p>
