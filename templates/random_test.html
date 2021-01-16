@@ -1,0 +1,17 @@
+{% extends 'layout.html'%}
+{% block content %}
+<form action="/random_test" method="post">
+
+<textarea class="form-control" rows="5" cols="90" id="test">Temperature 	Humidity 	Light 	CO2 	Humidity Ratio 	Occupancy
+{% if show %}
+{{ data2 }}
+{% endif %}
+</textarea>
+
+<button  class="btn btn-warning" type="submit">Test</button>
+
+<button onclick="document.getElementById('test').value='Temperature 	Humidity 	Light 	CO2 	Humidity Ratio 	Occupancy'" class="btn btn-danger" type="button">clear</button>
+
+</form>
+
+{% endblock %}

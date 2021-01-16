@@ -9,4 +9,3 @@ Light, in Lux
 CO2, in ppm
 Humidity Ratio, Derived quantity from temperature and relative humidity, in kgwater-vapor/kg-air
 Occupancy, 0 or 1, 0 for not occupied, 1 for occupied status
-
